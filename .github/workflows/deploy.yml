@@ -14,4 +14,5 @@ jobs:
           server: ftp.aportesea.com
           username: ${{ secrets.FTP_USER }}
           local-dir: dist/
+          server-dir: /
           password: ${{ secrets.FTP_PASSWORD }}
