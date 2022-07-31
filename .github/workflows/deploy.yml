@@ -25,7 +25,7 @@ jobs:
       - name: "FTP Deploy"
         uses: milanmk/actions-file-deployer@master
         with:
-          remote-protocol: "sftp"
+          remote-protocol: "ftp"
           remote-host: "ftp.aportesea.com"
           remote-user: "aportesea_user"
           remote-password: ${{ secrets.FTP_PRODUCTION_PASS }}
