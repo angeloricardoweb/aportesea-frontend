@@ -2,7 +2,7 @@ name: "Deploy na main via PR"
 on:
   push:
     branches: 
-      - main
+      - master
 
   workflow_dispatch:
     inputs:
