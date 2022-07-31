@@ -28,7 +28,7 @@ jobs:
           remote-protocol: "ftp"
           remote-host: "ftp.aportesea.com"
           remote-user: "u888089465.aportesea_user"
-          remote-password: ${{ secrets.FTP_PRODUCTION_PASS }}
-          remote-path: "/public_html"
-          publish_dir: ./dist
+          remote-password: ${{ secrets.FTP_KEY }}
+          remote-path: "/"
+          local-path: "/dist"
           sync: "full"
