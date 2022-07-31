@@ -1,34 +1,22 @@
-name: "Deploy na main via PR"
+name: Deploy na hostinger
 on:
   push:
-    branches: 
+    branches:
       - master
 
-  workflow_dispatch:
-    inputs:
-      sync:
-        description: "File synchronization"
-        required: true
-        default: "full"
-
 jobs:
-  deploy-master:
-    # if: ${{ github.event.pull_request.merged }}
-    name: "🎉 Deploy para produção"
-    runs-on: ubuntu-latest
+  build:
+  runs-on: ubuntu-latest
     steps:
-      - name: "Pega o código mais recente"
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      
-      - name: "FTP Deploy"
-        uses: milanmk/actions-file-deployer@master
-        with:
-          remote-protocol: "ftp"
-          remote-host: "ftp.aportesea.com"
-          remote-user: "u888089465.aportesea_user"
-          remote-password: ${{ secrets.FTP_KEY }}
-          remote-path: "/public_html"
-          local-path: "./dist"
-          sync: "full"
+      - name: Checkout do repositorio
+        users: actions/checkout/@1
+      - name: Deploy para meu hosting
+        users: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-rltgoDzvO"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          TARGET: ./public_html
