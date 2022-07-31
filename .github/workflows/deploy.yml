@@ -1,0 +1,19 @@
+name: Deploy React Application
+
+# Controls when the action will run. 
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      uses: actions/checkout@v2
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./dist
