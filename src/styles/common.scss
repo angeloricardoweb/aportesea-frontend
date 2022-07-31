@@ -11,3 +11,14 @@
         max-width: 820px;
     }
 }
+
+.card_servico {
+    margin-bottom: 0.5rem;
+    &:hover {
+        h3 {
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -4,7 +4,38 @@
 }
 
 h2 {
-    @apply text-brand-blue-600 font-light text-3xl;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    color: map-get($map: $colors, $key: blue-600);
+    &:after {
+        content: "";
+        width: 90px;
+        height: 2px;
+        background-color: map-get($map: $colors, $key: orange-600);
+        position: absolute;
+        bottom: 18px;
+        margin-left: 1rem;
+    }
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 90px;
+        height: 2px;
+        background-color: map-get($map: $colors, $key: orange-600);
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        transition: all 0.3s ease;
+    }
 }
 
 @media (max-width: 1080px) {
