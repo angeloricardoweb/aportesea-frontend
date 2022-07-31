@@ -1,4 +1,5 @@
 name: Deploy na hostinger
+
 on:
   push:
     branches:
@@ -9,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do repositorio
-        users: actions/checkout/@v1
+        uses: actions/checkout/@v1
       - name: Deploy para meu hosting
-        users: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: "-rltgoDzvO"
