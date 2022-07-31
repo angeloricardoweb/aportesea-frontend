@@ -9,7 +9,7 @@ on:
       sync:
         description: "File synchronization"
         required: true
-        default: "delta"
+        default: "full"
 
 jobs:
   deploy-master:
@@ -22,9 +22,13 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: "SFTP Deploy"
+      - name: "FTP Deploy"
         uses: milanmk/actions-file-deployer@master
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./build
-          sync: "delta"
+          remote-protocol: "sftp"
+          remote-host: "ftp.aportesea.com"
+          remote-user: "aportesea_user"
+          remote-password: ${{ secrets.FTP_PRODUCTION_PASS }}
+          remote-path: "/public_html"
+          publish_dir: ./dist
+          sync: "full"
