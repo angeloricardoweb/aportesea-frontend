@@ -17,6 +17,11 @@ h2 {
         position: absolute;
         bottom: 18px;
         margin-left: 1rem;
+        @media (max-width: 767.98px) {
+            bottom: -6px;
+            left: 0;
+            margin-left: 0rem;
+        }
     }
 }
 

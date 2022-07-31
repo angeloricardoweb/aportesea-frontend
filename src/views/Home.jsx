@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Hero from '../components/Sections/Hero'
 import SectionOQueFazemos from '../components/Sections/SectionOQueFazemos'
+import SectionProjetos from '../components/Sections/SectionProjetos'
 import SectionSobreNos from '../components/Sections/SectionSobreNos'
 
 
@@ -26,6 +27,10 @@ export default function Home() {
 
             <section className='py-20 bg-zinc-200'>
                 <SectionOQueFazemos />
+            </section>
+
+            <section className='py-20 bg-brand-blue-600'>
+                <SectionProjetos />
             </section>
 
 
