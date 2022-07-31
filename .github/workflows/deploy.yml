@@ -9,7 +9,7 @@ jobs:
   runs-on: ubuntu-latest
     steps:
       - name: Checkout do repositorio
-        users: actions/checkout/@1
+        users: actions/checkout/@v1
       - name: Deploy para meu hosting
         users: easingthemes/ssh-deploy@main
         env:
