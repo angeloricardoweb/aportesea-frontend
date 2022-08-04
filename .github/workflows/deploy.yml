@@ -8,7 +8,10 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
 
-      - name: 📦 Create Build
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🏗️ Create Build
         run: npm run build
 
       - name: 📂 Sync files
