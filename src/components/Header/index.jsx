@@ -20,7 +20,8 @@ export function Header() {
                                 <li><a>Item 3</a></li>
                             </ul>
                         </div>
-                        <a href='#'><img src="/img/logo.jpeg" alt="aporte sea" className='h-12' /></a>
+                        {/* <a href='#'><img src="/img/logo.jpeg" alt="aporte sea" className='h-12' /></a> */}
+                        <span>Site em desenvolvimento</span>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal p-0">
@@ -31,7 +32,7 @@ export function Header() {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <a className="btn">Get started</a>
+                        <a className="btn">Contratar agora</a>
                     </div>
                 </div>
             </div>

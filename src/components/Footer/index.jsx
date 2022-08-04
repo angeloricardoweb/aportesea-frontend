@@ -4,7 +4,7 @@ import styles from './style.module.scss'
 export function Footer() {
     return (
         <>
-            <div className=' bg-neutral'>
+            <div className=' bg-brand-orange-600'>
                 <div className=" main_container ">
                     <footer className="footer py-10 text-neutral-content">
 
