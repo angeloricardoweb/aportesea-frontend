@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Hero() {
     return (
-        <section className="bg-zinc-100">
+        <section className="bg-zinc-100 mt-[90px]">
             <div className="relative bg-white overflow-hidden">
                 <div className="main_container">
                     <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
@@ -18,7 +18,7 @@ export default function Hero() {
                         <div className="mt-10 mx-auto max-w-7xl  sm:mt-12  md:mt-16 lg:mt-20 xl:mt-28">
                             <div className="sm:text-center lg:text-left">
                                 <h1 className=" tracking-tight font-extrabold ">
-                                    <span className="block sm:text-5xl md:text-6xl text-brand-blue-600">Aporte Sea</span>
+                                    <span className="block text-4xl sm:text-5xl md:text-6xl text-brand-blue-600">Aporte Sea</span>
                                     <span className="block text-brand-blue-100 xl:inline text-2xl">Engenharia, Consultoria e Treinamento</span>
                                 </h1>
                                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from './views/Home';
 import Contato from './views/Contato';
 import { Header } from "./components/Header";
@@ -9,15 +9,17 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contato" element={<Contato />} />
-        <Route path="/servico" element={<Servico />} />
-        <Route path="/post/:post_uid" element={<Post />} />
+      <BrowserRouter>
+        <Header />
 
-      </Routes>
-      <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contato" element={<Contato />} />
+          <Route path="/servico" element={<Servico />} />
+          <Route path="/post/:post_uid" element={<Post />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }
