@@ -9,8 +9,7 @@ export default function SectionComoContratar() {
 
                 <div className="grid md:grid-cols-2">
 
-                    <div className='bg-brand-blue-50 hidden md:block'>
-                        background
+                    <div className='bg-brand-blue-50 hidden md:block bg-[url(/img/contact-us.jpg)] bg-center bg-cover'>
                     </div>
 
                     <div>
@@ -26,13 +25,13 @@ export default function SectionComoContratar() {
                                 <label className="label">
                                     <span className="label-text">Adicione um E-mail.</span>
                                 </label>
-                                <input type="text" placeholder="Nome" className="input input-bordered w-full max-w-xs" />
+                                <input type="email" placeholder="Email" className="input input-bordered w-full max-w-xs" />
                             </div>
                             <div className="form-control w-full max-w-xs mx-auto mt-3">
                                 <label className="label">
                                     <span className="label-text">Adicione um Telefone.</span>
                                 </label>
-                                <input type="text" placeholder="Nome" className="input input-bordered w-full max-w-xs" />
+                                <input type="number" placeholder="Telefone" className="input input-bordered w-full max-w-xs" />
                                 <div className="mt-3">
                                     <button class="btn">Solicitar contato</button>
                                 </div>

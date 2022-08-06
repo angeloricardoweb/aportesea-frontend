@@ -8,7 +8,7 @@ export default function SectionOQueFazemos() {
     const servicos = [
         {
             id: 1,
-            nome: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+            nome: 'Segurança do Trabalho',
             banner: '/temp/servico-1.jpg',
             url: '/'
         },
@@ -27,19 +27,19 @@ export default function SectionOQueFazemos() {
         ,
         {
             id: 4,
-            nome: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+            nome: 'Consultoria',
             banner: '/temp/servico-4.jpg',
             url: '/'
         },
         {
             id: 5,
-            nome: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+            nome: 'Manutenção em máquinas auxiliares',
             banner: '/temp/servico-5.jpg',
             url: '/'
         },
         {
             id: 6,
-            nome: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+            nome: 'Manutenção preditiva e END',
             banner: '/temp/servico-6.jpg',
             url: '/'
         }
@@ -51,7 +51,7 @@ export default function SectionOQueFazemos() {
         <div>
             <div className="main_container">
                 <h2>O que fazemos</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, consequatur modi. Ipsam voluptatem blanditiis tempora aut illo minus dolores enim perferendis sapiente quo harum qui consequuntur, nemo nobis officia architecto?</p>
+                {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, consequatur modi. Ipsam voluptatem blanditiis tempora aut illo minus dolores enim perferendis sapiente quo harum qui consequuntur, nemo nobis officia architecto?</p> */}
                 <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12'>
                     {React.Children.toArray(
                         servicos.map(servico => <CardServico servico={servico} />)

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Hero from '../components/Sections/Hero'
+import SectionClientes from '../components/Sections/SectionClientes'
 import SectionComoContratar from '../components/Sections/SectionComoContratar'
 import SectionOQueFazemos from '../components/Sections/SectionOQueFazemos'
 import SectionProjetos from '../components/Sections/SectionProjetos'
@@ -17,7 +18,7 @@ export default function Home() {
 
             <section className='bg-brand-blue-100'>
                 <div className="main_container py-4">
-                    <span className='text-white'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur laboriosam eos delectus quas deleniti nihil quaerat ab in ratione impedit, blanditiis amet eligendi molestiae eum asperiores dolor? Id, tempore natus.</span>
+                    <span className='text-white text-xl'>Site em desenvolvimento, estamos construindo uma melhor experiência para nossos clientes, aguarde...</span>
 
                 </div>
             </section>
@@ -26,11 +27,15 @@ export default function Home() {
                 <SectionSobreNos />
             </section>
 
-            <section className='py-24 bg-zinc-200'>
+            <section className='pt-24 pb-32 bg-zinc-300 bg-opacity-70'>
+                <SectionClientes />
+            </section>
+
+            <section className='py-24'>
                 <SectionOQueFazemos />
             </section>
 
-            <section className='py-24 bg-brand-blue-600'>
+            <section className='py-24 bg-brand-blue-600 bg-opacity-80'>
                 <SectionProjetos />
             </section>
             <section className='py-24'>

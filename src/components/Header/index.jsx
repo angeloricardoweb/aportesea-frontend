@@ -4,7 +4,7 @@ import styles from './style.module.scss'
 
 export function Header() {
     return (
-        <header className=" bg-zinc-200">
+        <header className=" bg-zinc-200 fixed z-50 top-0 w-full shadow">
             <div className="main_container">
 
                 <div className="navbar">
@@ -20,19 +20,17 @@ export function Header() {
                                 <li><a>Item 3</a></li>
                             </ul>
                         </div>
-                        {/* <a href='#'><img src="/img/logo.jpeg" alt="aporte sea" className='h-12' /></a> */}
-                        <span>Site em desenvolvimento</span>
+                        <a href='#'><img src="/img/logo.png" alt="aporte sea" className='h-12' /></a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal p-0">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 2</a></li>
-
-                            <li><a>Item 3</a></li>
+                            <li><a>Sobre nós</a></li>
+                            <li><a>Serviços</a></li>
+                            <li><a>Projetos</a></li>
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <a className="btn">Contratar agora</a>
+                        <a className="btn">Área de treinamento</a>
                     </div>
                 </div>
             </div>
