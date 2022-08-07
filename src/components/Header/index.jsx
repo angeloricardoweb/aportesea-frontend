@@ -29,9 +29,9 @@ export function Header() {
                         </a>
                     </div>
                     <div className='block md:hidden'>
-                        <div class="dropdown dropdown-end">
-                            <label tabindex="0" class="btn m-1 bg-zinc-200"><FaAlignJustify /></label>
-                            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <div className="dropdown dropdown-end">
+                            <label tabIndex="0" className="btn m-1 bg-zinc-200"><FaAlignJustify /></label>
+                            <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li> <a href="/" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
                                     Serviços
                                 </a></li>

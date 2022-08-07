@@ -32,7 +32,7 @@ export function Footer() {
 
                 </div>
             </div>
-            <div class="footer items-center p-4 bg-black text-neutral-content">
+            <div className="footer items-center p-4 bg-black text-neutral-content">
                 <div className="main_container">
                     <div className="flex justify-between w-full">
                         <div>
