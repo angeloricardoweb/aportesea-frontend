@@ -10,7 +10,6 @@ export default function SectionComoContratar() {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
 
     async function postForm(email, nome, telefone) {
-        reset({ email, nome, telefone })
 
         try {
             const response = await fetch("https://formsquash.io/f/PPw2VhsHNBVjuAQ26I7s", {
@@ -28,9 +27,6 @@ export default function SectionComoContratar() {
             })
             const data = await response.json();
 
-            console.log(data)
-
-
             toast.success('E-mail enviado com sucesso', {
                 position: "top-right",
                 autoClose: 5000,
@@ -40,9 +36,19 @@ export default function SectionComoContratar() {
                 draggable: true,
                 progress: undefined,
             });
+            reset({ email: '', nome: '', telefone: '' })
 
         } catch (error) {
             console.log(error)
+            toast.error('Ocorreu um erro ao enviar, por favor, entre em contato através de nosso e-mail', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
 
     }
