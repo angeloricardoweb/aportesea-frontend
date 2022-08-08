@@ -1,13 +1,17 @@
 import React from 'react'
 import { FaFacebook, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 
 export default function SectionComoContratar() {
+    const notify = () => toast("Email Recebido com Sucesso. Entraremos em contato em breve!");
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
 
     async function postForm(email, nome, telefone) {
+        reset({ email, nome, telefone })
+
         try {
             const response = await fetch("https://formsquash.io/f/PPw2VhsHNBVjuAQ26I7s", {
                 method: "POST",
@@ -23,7 +27,20 @@ export default function SectionComoContratar() {
                 })
             })
             const data = await response.json();
-            console.log(data);
+
+            console.log(data)
+
+
+            toast.success('E-mail enviado com sucesso', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+
         } catch (error) {
             console.log(error)
         }

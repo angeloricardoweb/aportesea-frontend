@@ -5,6 +5,9 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import Post from "./views/Post";
 import Servico from "./views/Servico";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
 
   return (
@@ -19,6 +22,7 @@ function App() {
           <Route path="/post/:post_uid" element={<Post />} />
         </Routes>
         <Footer />
+        <ToastContainer />
       </BrowserRouter>
     </>
   )
