@@ -11,20 +11,20 @@ export function Header() {
                 <div className="flex justify-between items-center">
                     <div>
                         <Link to="/">
-                            <img src="/img/logo.png" alt="aporte sea" className="w-44" />
+                            <img src="/img/logo.png" alt="aporte sea" className="w-32" />
                         </Link>
                     </div>
                     <div className='gap-2 hidden md:flex'>
-                        <a href="/" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
+                        <a href="/" className='p-2 hover:text-brand-orange-600 font-bold '>
                             Serviços
                         </a>
-                        <Link to="/contato" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
+                        <Link to="/contato" className='p-2 hover:text-brand-orange-600 font-bold '>
                             Contatos
                         </Link>
-                        <a href="/" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
+                        <a href="/" className='p-2 hover:text-brand-orange-600 font-bold '>
                             Portólio
                         </a>
-                        <a href="/" className='px-3 py-2 hover:text-brand-orange-600 font-bold text-xl border-brand-orange-600 border rounded-md'>
+                        <a href="/" className='px-3 py-2 hover:text-brand-orange-600 font-bold  border-brand-orange-600 border rounded-md'>
                             Área de treinamento
                         </a>
                     </div>
