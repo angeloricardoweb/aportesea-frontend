@@ -63,3 +63,50 @@
         }
     }
 }
+
+.swiper_projeto {
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        p {
+            margin-top: 1rem;
+            font-size: 18px;
+            text-align: start;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 120px;
+                height: 2px;
+                background-color: blue;
+                bottom: -8px;
+                left: 0;
+            }
+        }
+        h4 {
+            margin-top: 1rem;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: start;
+            color: blue;
+        }
+    }
+}

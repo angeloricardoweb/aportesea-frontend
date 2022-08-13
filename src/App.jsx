@@ -7,6 +7,8 @@ import Post from "./views/Post";
 import Servico from "./views/Servico";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AreaRestrita from './views/AreaRestrita';
+import Projetos from "./views/Projetos";
 
 function App() {
 
@@ -19,7 +21,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/servico" element={<Servico />} />
+          <Route path="/projetos" element={<Projetos />} />
           <Route path="/post/:post_uid" element={<Post />} />
+          <Route path="/area-restrita/:empresa" element={<AreaRestrita />} />
         </Routes>
         <Footer />
         <ToastContainer />
