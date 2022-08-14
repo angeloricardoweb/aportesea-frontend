@@ -2,10 +2,12 @@ import React from 'react'
 import { FaFacebook, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
+import { useSinglePrismicDocument } from '@prismicio/react';
 
 
 export default function SectionComoContratar() {
     const notify = () => toast("Email Recebido com Sucesso. Entraremos em contato em breve!");
+    const [contato] = useSinglePrismicDocument('contatos_e_redes_sociais')
 
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
 
@@ -100,15 +102,21 @@ export default function SectionComoContratar() {
                                 <h4>Fale conosco agora mesmo através de uma de nossas redes!</h4>
                             </div>
                             <div className="flex justify-center gap-4 mt-5">
-                                <a href="/">
-                                    <FaFacebook className="text-[44px]" />
-                                </a>
-                                <a href="/">
-                                    <FaWhatsapp className="text-[48px]" />
-                                </a>
-                                <a href="/">
-                                    <FaInstagram className="text-[48px]" />
-                                </a>
+                                {contato?.data.facebook && (
+                                    <a href={`https://www.facebook.com/${contato.data.facebook}`} target="_blank">
+                                        <FaFacebook className="text-[44px]" />
+                                    </a>
+                                )}
+                                {contato?.data.whatsapp && (
+                                    <a href={`https://api.whatsapp.com/send?phone=${contato.data.whatsapp}`} target="_blank">
+                                        <FaWhatsapp className="text-[48px]" />
+                                    </a>
+                                )}
+                                {contato?.data.instagram && (
+                                    <a href={`https://www.instagram.com/${contato.data.instagram}`} target="_blank">
+                                        <FaInstagram className="text-[48px]" />
+                                    </a>
+                                )}
                             </div>
 
 
