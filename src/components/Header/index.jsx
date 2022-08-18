@@ -25,26 +25,29 @@ export function Header() {
                         <Link to="/projetos" className='p-2 hover:text-brand-orange-600 font-bold '>
                             Projetos
                         </Link>
-                        <a href="/" className='px-3 py-2 hover:text-brand-orange-600 font-bold  border-brand-orange-600 border rounded-md'>
+                        {/* <a href="/" className='px-3 py-2 hover:text-brand-orange-600 font-bold  border-brand-orange-600 border rounded-md'>
                             Área de treinamento
-                        </a>
+                        </a> */}
                     </div>
                     <div className='block md:hidden'>
                         <div className="dropdown dropdown-end">
                             <label tabIndex="0" className="btn m-1 bg-zinc-200"><FaAlignJustify /></label>
                             <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li> <a href="/" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
-                                    Serviços
+                                    Home
                                 </a></li>
-                                <li> <a href="/" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
+                                <li> <HashLink to="/#servicos" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
+                                    Serviços
+                                </HashLink></li>
+                                <li> <a href="/contato" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
                                     Contatos
                                 </a></li>
-                                <li> <a href="/" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
-                                    Portfólio
+                                <li> <a href="/projetos" className='p-2 hover:text-brand-orange-600 font-bold text-xl'>
+                                    Projetos
                                 </a></li>
-                                <li> <a href="/" className='px-3 py-2 hover:text-brand-orange-600 font-bold text-xl border-brand-orange-600 border rounded-md'>
+                                {/* <li> <a href="/" className='px-3 py-2 hover:text-brand-orange-600 font-bold text-xl border-brand-orange-600 border rounded-md'>
                                     Área de treinamento
-                                </a></li>
+                                </a></li> */}
                             </ul>
                         </div>
                     </div>
