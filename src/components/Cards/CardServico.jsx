@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CardServico({ servico }) {
     return (
-        <a href={"/" + servico.uid} className='card_servico'>
+        <a href={"/servico/" + servico.uid} className='card_servico'>
             <div className='w-full aspect-[21/12] bg-cover rounded'
                 style={{
                     backgroundImage: `url(${servico.data.banner_do_servico.url})`

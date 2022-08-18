@@ -4,7 +4,6 @@ import { useAllPrismicDocumentsByType } from '@prismicio/react';
 
 export default function Projetos() {
     const [projetos] = useAllPrismicDocumentsByType('projeto')
-    console.log(projetos)
     return (
         <main className='py-32'>
             <div className="main_container">
