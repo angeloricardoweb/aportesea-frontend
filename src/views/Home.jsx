@@ -31,7 +31,7 @@ export default function Home() {
                 <SectionClientes />
             </section>
 
-            <section className='py-24'>
+            <section className='py-24' id="servicos">
                 <SectionOQueFazemos />
             </section>
 

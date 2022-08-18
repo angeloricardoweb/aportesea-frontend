@@ -2,6 +2,7 @@ import React from 'react'
 import { FaAlignJustify } from 'react-icons/fa'
 import './style.scss'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 export function Header() {
     return (
@@ -15,15 +16,15 @@ export function Header() {
                         </Link>
                     </div>
                     <div className='gap-2 hidden md:flex'>
-                        <a href="/" className='p-2 hover:text-brand-orange-600 font-bold '>
+                        <HashLink to="/#servicos" className='p-2 hover:text-brand-orange-600 font-bold '>
                             Serviços
-                        </a>
+                        </HashLink>
                         <Link to="/contato" className='p-2 hover:text-brand-orange-600 font-bold '>
                             Contatos
                         </Link>
-                        <a href="/" className='p-2 hover:text-brand-orange-600 font-bold '>
-                            Portólio
-                        </a>
+                        <Link to="/projetos" className='p-2 hover:text-brand-orange-600 font-bold '>
+                            Projetos
+                        </Link>
                         <a href="/" className='px-3 py-2 hover:text-brand-orange-600 font-bold  border-brand-orange-600 border rounded-md'>
                             Área de treinamento
                         </a>
