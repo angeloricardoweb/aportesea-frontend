@@ -6,12 +6,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import { useSinglePrismicDocument } from '@prismicio/react'
 
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper";
 
 export function SwiperBrands() {
-
+    const [response] = useSinglePrismicDocument('parceiros')
+    console.log(response?.data.parceiros);
     return (
         <>
             <Swiper
@@ -44,28 +46,15 @@ export function SwiperBrands() {
                 modules={[Autoplay, Pagination, Navigation]}
                 className='swiper_brands'
             >
+                {
+                    response &&
+                    React.Children.toArray(response.data.parceiros.map(parceiro => (
+                        <SwiperSlide >
+                            <SwiperImage {...parceiro} />
+                        </SwiperSlide>
 
-                <SwiperSlide>
-                    <SwiperImage />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <SwiperImage />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <SwiperImage />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <SwiperImage />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <SwiperImage />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <SwiperImage />
-                </SwiperSlide>
+                    )))
+                }
 
             </Swiper>
         </>
@@ -73,10 +62,10 @@ export function SwiperBrands() {
 }
 
 
-const SwiperImage = (data) => {
+const SwiperImage = (parceiro) => {
     return (
         <div>
-            <img src="/temp/logo-example.png" alt="lorem picsum" />
+            <img src={parceiro.image.url} alt={parceiro.nome}   />
         </div>
     );
 }
