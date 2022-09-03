@@ -27,7 +27,7 @@ export default function Home() {
                 <SectionSobreNos />
             </section>
 
-            <section className='pt-24 pb-32 bg-zinc-300 bg-opacity-70'>
+            <section className='pt-24 pb-32 bg-white bg-opacity-70'>
                 <SectionClientes />
             </section>
 
