@@ -9,10 +9,10 @@ export default function SectionComoContratar() {
     const notify = () => toast("Email Recebido com Sucesso. Entraremos em contato em breve!");
     const [contato] = useSinglePrismicDocument('contatos_e_redes_sociais')
 
-    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, watch, formState: { errors, isSubmitting }, reset } = useForm();
 
-    async function postForm(email, nome, telefone) {
 
+    async function onSubmit({ email, nome, telefone }) {
         try {
             const response = await fetch("https://formsquash.io/f/PPw2VhsHNBVjuAQ26I7s", {
                 method: "POST",
@@ -52,11 +52,6 @@ export default function SectionComoContratar() {
                 progress: undefined,
             });
         }
-
-    }
-
-    const onSubmit = ({ email, nome, telefone }) => {
-        postForm(email, nome, telefone)
     };
 
     return (
@@ -93,8 +88,11 @@ export default function SectionComoContratar() {
                                 <input type="number" placeholder="Telefone" className="input input-bordered w-full max-w-xs" {...register("telefone", { required: true })} />
                                 {errors.telefone && <span className='text-brand-orange-600'>Campo Obrigatório</span>}
                                 <div className="mt-3">
-                                    <button className="btn" type="submit">Solicitar contato</button>
+                                    <button className="btn" type="submit" disabled={isSubmitting}>Solicitar contato</button>
                                 </div>
+                                {
+                                    isSubmitting && <p className='mt-2'>Enviando...</p>
+                                }
                                 <div className="divider">ou</div>
                             </div>
 

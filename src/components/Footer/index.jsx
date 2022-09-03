@@ -1,5 +1,4 @@
-import React from 'react'
-import styles from './style.module.scss'
+import { CgMail, CgSmartphone } from "react-icons/cg";
 
 export function Footer() {
     return (
@@ -9,27 +8,28 @@ export function Footer() {
                     <footer className="footer py-10 text-neutral-content">
 
                         <div>
-                            <span className="text-white font-bold text-lg">Services</span>
-                            <a className="text-white">Branding</a>
-                            <a className="text-white">Design</a>
-                            <a className="text-white">Marketing</a>
-                            <a className="text-white">Advertisement</a>
+                            <span className="text-white font-bold text-lg">Serviços</span>
+                            <a href="/#servicos" className="text-white">ELÉTRICOS E AUTOMAÇÃO</a>
+                            <a href="/#servicos" className="text-white">SEGURANÇA DO TRABALHO</a>
+                            <a href="/#servicos" className="text-white">CLIMATIZAÇÃO E REFRIGERAÇÃO</a>
+                            <a href="/#servicos" className="text-white">TREINAMENTO DE SEGURANÇA E
+                                SALVATAGEM</a>
                         </div>
                         <div>
-                            <span className="text-white font-bold text-lg">Company</span>
-                            <a className="text-white">About us</a>
-                            <a className="text-white">Contact</a>
-                            <a className="text-white">Jobs</a>
-                            <a className="text-white">Press kit</a>
+                            <p className="text-white font-bold text-lg">Contatos</p>
+                            <p className="flex items-center gap-2"><CgMail className="text-white"/> <span className="text-white"> contato@aportesea.com</span></p>
+                            <p className="flex items-center gap-2"><CgMail className="text-white"/> <span className="text-white">luciana@aportesea.com</span> </p>
+                            <p className="flex items-center gap-2"><CgMail className="text-white"/> <span className="text-white"> murillo@aportesea.com</span></p>
+                            <p className="flex items-center gap-2"><CgSmartphone className="text-white"/> <span className="text-white"> + 55 91 8494-3702</span></p>
+
                         </div>
                         <div>
-                            <span className="text-white font-bold text-lg">Legal</span>
-                            <a className="text-white">Terms of use</a>
-                            <a className="text-white">Privacy policy</a>
-                            <a className="text-white">Cookie policy</a>
+                            <p className="text-white font-bold text-lg">Mapa do site</p>
+                            <a href="/#servicos" className="text-white">Serviços</a>
+                            <a href="/contatos" className="text-white">Contatos</a>
+                            <a href="/projetos" className="text-white">Projetos</a>
                         </div>
                     </footer>
-
                 </div>
             </div>
             <div className="footer items-center p-4 bg-black text-neutral-content">
@@ -40,7 +40,7 @@ export function Footer() {
                         </div>
 
                         <div>
-                            <p className=' text-white text-end'>Desenvolvido por Angelo Ricardo</p>
+                            <p className=' text-white text-end'>CNPJ: 20.191.834/0001-39</p>
                         </div>
                     </div>
 

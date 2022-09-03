@@ -24,7 +24,7 @@ export default function Hero() {
                                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
                                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div className="rounded-md shadow">
-                                        <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-orange-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Como contratar? </a>
+                                        <a href="/contato" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-orange-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Como contratar? </a>
                                     </div>
 
                                 </div>
