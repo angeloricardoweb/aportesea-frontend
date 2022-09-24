@@ -1,6 +1,11 @@
 import React from 'react'
+import { useSinglePrismicDocument } from '@prismicio/react'
+
 
 export default function Hero() {
+  const [hero] = useSinglePrismicDocument('hero')
+  console.log(hero);
+
     return (
         <section className="bg-zinc-100 mt-[72px]">
             <div className="relative bg-white overflow-hidden">
@@ -19,9 +24,9 @@ export default function Hero() {
                             <div className="sm:text-center lg:text-left">
                                 <h1 className=" tracking-tight font-extrabold ">
                                     <span className="block text-4xl sm:text-5xl md:text-6xl text-brand-blue-600">Aporte Sea</span>
-                                    <span className="block text-brand-blue-100 xl:inline text-2xl">Engenharia, Consultoria e Treinamento</span>
+                                    <span className="block text-brand-blue-100 xl:inline text-2xl">{hero?.data.descricao}</span>
                                 </h1>
-                                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">{hero?.data.chamada}</p>
                                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div className="rounded-md shadow">
                                         <a href="/contato" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-orange-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Como contratar? </a>
