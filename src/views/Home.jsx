@@ -16,12 +16,12 @@ export default function Home() {
             <Hero />
 
 
-            <section className='bg-brand-blue-100'>
+            {/* <section className='bg-brand-blue-100'>
                 <div className="main_container py-4">
                     <span className='text-white text-xl'>Site em desenvolvimento, estamos construindo uma melhor experiência para nossos clientes, aguarde...</span>
 
                 </div>
-            </section>
+            </section> */}
 
             <section className='py-24'>
                 <SectionSobreNos />
